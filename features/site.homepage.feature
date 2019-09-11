@@ -4,7 +4,7 @@ Feature: Site - Homepage
 		Given I am a new user
 		And I am on "/"
 
-		@site @homepage @uat @functional @homepage @uat @functional @regression @linksAndButtons
+		@site @homepage @uat @functional @regression @linksAndButtons
 		Scenario Outline: I want to use all button and link components in Site - Homepage
 			When I <action> <element> from <component>
 			Then I <expectedResult>
@@ -63,7 +63,7 @@ Feature: Site - Homepage
 			|	follow |	Terms | Footer | should be on "/p/legal/terms" |
 			|	follow |	Privacy | Footer | should be on "/p/legal/privacy" |
 
-		@site @homepage @uat @functional @homepage @uat @functional @regression @login @validLogin
+		@site @homepage @uat @functional @regression @login @validLogin
 		Scenario Outline: I want to login using valid credentials
 			Given I am <user>
 			And I am on "/"
