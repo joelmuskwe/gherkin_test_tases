@@ -50,18 +50,18 @@ Feature: Site - Homepage
 			| Twitter | Footer | should be on "https://www.twitter.com/makespace" |
 			| Instagram | Footer | should be on "https://www.instagram.com/makespace" |
 			| Pinterest | Footer | should be on "https://www.pinterest.com/GetMakeSpace" |
-			|	Support | Footer | should be on "/account/login/?next=/support" |
-			|	About | Footer | should be on "/about/team" |
-			|	Locations | Footer | should be on "/locations" |
-			|	Careers | Footer | should be on "/about/careers" |
-			|	Features | Footer | should be on "/features" |
-			|	Pricing | Footer | should be on "/get-storage-quote" |
-			|	FAQ | Footer | should be on "/faq" |
-			|	Storage Rules | Footer | should be on "/p/about/storage-rules" |
-			|	Tips | Footer | should be on "/p/tips" |
-			|	Blog | Footer | should be on "/blog" |
-			|	Terms | Footer | should be on "/p/legal/terms" |
-			|	Privacy | Footer | should be on "/p/legal/privacy" |
+			| Support | Footer | should be on "/account/login/?next=/support" |
+			| About | Footer | should be on "/about/team" |
+			| Locations | Footer | should be on "/locations" |
+			| Careers | Footer | should be on "/about/careers" |
+			| Features | Footer | should be on "/features" |
+			| Pricing | Footer | should be on "/get-storage-quote" |
+			| FAQ | Footer | should be on "/faq" |
+			| Storage Rules | Footer | should be on "/p/about/storage-rules" |
+			| Tips | Footer | should be on "/p/tips" |
+			| Blog | Footer | should be on "/blog" |
+			| Terms | Footer | should be on "/p/legal/terms" |
+			| Privacy | Footer | should be on "/p/legal/privacy" |
 
 		@site @homepage @uat @functional @regression @login @validLogin
 		Scenario Outline: I want to login using valid credentials
@@ -77,7 +77,7 @@ Feature: Site - Homepage
 				# For example a user with no CC info, a user in Toronto
 			Examples:
 			| user | credentials |
-			|	 |  |
+			|  |  |
 
 		Scenario Outline: I want to submit valid information in the leads form
 			Given I am on "/"
