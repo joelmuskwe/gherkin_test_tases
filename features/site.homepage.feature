@@ -12,7 +12,7 @@ Feature: Site - Homepage
 			Examples:
 			| element          | component                  |  expectedResult                   |
 			| MakeSpace Logo   | Navigation                 | should be on "/"                  |
-			| Business         | Navigation                 | should be on "/business-storage"  |
+			| Business Storage | Navigation                 | should be on "/business-storage"  |
 			| Features         | Navigation                 | should be on "/features" .        |
 			| Sales Number     | Navigation                 | should open the phone application |
 			| Get Pricing      | Navigation                 | should be on "/get-storage-quote" |
