@@ -5,7 +5,7 @@ Feature: Site - Homepage
 		Given I am a new user
 		And I am on "/"
 
-	  @linksAndButtons
+		@linksAndButtons
 		Scenario Outline: I want to use all button and link components in Site - Homepage
 			When I press <element> from <component>
 			Then I <expectedResult>
@@ -64,7 +64,7 @@ Feature: Site - Homepage
 				| Terms            | Footer                     | should be on "/p/legal/terms"                         |
 				| Privacy          | Footer                     | should be on "/p/legal/privacy"                       |
 
-	  @leadCapture @submitLeadViaHomepage
+		@leadCapture @submitLeadViaHomepage
 		Scenario Outline: I want to submit a lead with valid information on homepage lead capture form
 			When I submit <myInformation>
 			Then I should be on "/book/storage"
