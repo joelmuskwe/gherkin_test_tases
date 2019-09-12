@@ -3,5 +3,5 @@ This space will be used to reverse engineer stories for Make Space applications.
 
 ## Tasks
 
-- [x] - @minamel - Author user stories for Site - Homepage
+- [x] - @MinaMeltem - Author user stories for Site - Homepage
 - [x] - @sajjadhossain - Review and add comments to PR
