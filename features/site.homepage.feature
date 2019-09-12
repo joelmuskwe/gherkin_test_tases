@@ -45,7 +45,7 @@ Feature: Site - Homepage
 			| San Antonio      | Serving Cities             | should be on "/san-antonio"       |
 			| Phoenix          | Serving Cities             | should be on "/phoenix"           |
 			| Toronto          | Serving Cities             | should be on "/toronto"           |
-			| Sales Number     | Footer	                    | should open the phone application |
+			| Sales Number     | Footer	                | should open the phone application |
 			| Email Us         | Footer                     | should open the mail application  |
 			| Facebook         | Footer                     | should be on "https://www.facebook.com/MakeSpaceCom"  |
 			| Twitter          | Footer                     | should be on "https://www.twitter.com/makespace"      |
