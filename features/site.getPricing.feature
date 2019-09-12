@@ -4,7 +4,8 @@ Feature: Site - Homepage
 		Given I am a new user
 		And I am on "/"
 
-  @site @homepage
+        @site @homepage
+
 	Scenario Outline: I want to use all button and link components in Site - Homepage
 		When I press <element> from <component>
 		Then I <expectedResult>
