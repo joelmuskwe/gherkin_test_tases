@@ -4,11 +4,9 @@ Feature: Site - Homepage
 		Given I am a new user
 		And I am on "/"
 
-		@site @homepage @uat @functional @regression @linksAndButtons
-		
-		Scenario Outline: I want to use all button and link components in Site - Homepage
-			When I press <element> from <component>
-			Then I <expectedResult>
+	Scenario Outline: I want to use all button and link components in Site - Homepage
+		When I press <element> from <component>
+		Then I <expectedResult>
 
 			Examples:
 			| element          | component                  |  expectedResult                   |
@@ -45,7 +43,7 @@ Feature: Site - Homepage
 			| San Antonio      | Serving Cities             | should be on "/san-antonio"       |
 			| Phoenix          | Serving Cities             | should be on "/phoenix"           |
 			| Toronto          | Serving Cities             | should be on "/toronto"           |
-			| Sales Number     | Footer	                | should open the phone application |
+			| Sales Number     | Footer	                    | should open the phone application |
 			| Email Us         | Footer                     | should open the mail application  |
 			| Facebook         | Footer                     | should be on "https://www.facebook.com/MakeSpaceCom"  |
 			| Twitter          | Footer                     | should be on "https://www.twitter.com/makespace"      |
@@ -64,31 +62,35 @@ Feature: Site - Homepage
 			| Terms            | Footer                     | should be on "/p/legal/terms"         |
 			| Privacy          | Footer                     | should be on "/p/legal/privacy"       |
 
-		@site @homepage @uat @functional @regression @login @validLogin
-		
-		Scenario Outline: I want to login by using valid credentials
-			Given I am <user>
-			And I am on "/"
-			And I press "LOGIN"
-			Then I should be on "/account/login"
-			When I submit my <credentials>
-			Then I should be on "/"
-			And I should be logged in
-
-			# We need QA accounts of various states, types and profiles
-			# For example a user with no CC info, a user in Toronto
-			
-			Examples:
-			| user | credentials |
-			|      |             |
-
-		Scenario Outline: I want to submit valid information in homepage lead capture form
-			Given I am on "/"
-			When I submit <myInformation>
+	Scenario Outline: I want to submit a lead with valid information on homepage lead capture form
+      When I submit <myInformation>
 			Then I should be on "/book/storage"
 
 			# We need information that meets all criteria for boundary and smoke/regression tests
-			
+
 			Examples:
 			| myInformation |
 			|               |
+
+
+
+
+Feature: Login Functionality
+
+	@site @homepage @uat @functional @regression @login @validLogin
+
+	Scenario Outline: I want to login by using valid credentials
+		Given I am <existent user>
+		And I am on "/"
+		And I press "LOGIN"
+		Then I should be on "/account/login"
+		When I submit my <credentials>
+		Then I should be on "/"
+		And I should be logged in
+
+		# We need QA accounts of various states, types and profiles
+		# For example a user with no CC info, a user in Toronto
+
+		Examples:
+		| user | credentials |
+		|      |             |
