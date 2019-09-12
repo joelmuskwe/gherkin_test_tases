@@ -5,6 +5,7 @@ Feature: Site - Homepage
 		And I am on "/"
 
 		@site @homepage @uat @functional @regression @linksAndButtons
+		
 		Scenario Outline: I want to use all button and link components in Site - Homepage
 			When I press <element> from <component>
 			Then I <expectedResult>
@@ -64,7 +65,8 @@ Feature: Site - Homepage
 			| Privacy          | Footer                     | should be on "/p/legal/privacy"       |
 
 		@site @homepage @uat @functional @regression @login @validLogin
-		Scenario Outline: I want to login using valid credentials
+		
+		Scenario Outline: I want to login by using valid credentials
 			Given I am <user>
 			And I am on "/"
 			And I press "LOGIN"
@@ -74,17 +76,19 @@ Feature: Site - Homepage
 			And I should be logged in
 
 			# We need QA accounts of various states, types and profiles
-				# For example a user with no CC info, a user in Toronto
+			# For example a user with no CC info, a user in Toronto
+			
 			Examples:
 			| user | credentials |
-			|  |  |
+			|      |             |
 
-		Scenario Outline: I want to submit valid information in the leads form
+		Scenario Outline: I want to submit valid information in homepage lead capture form
 			Given I am on "/"
 			When I submit <myInformation>
 			Then I should be on "/book/storage"
 
 			# We need information that meets all criteria for boundary and smoke/regression tests
+			
 			Examples:
 			| myInformation |
-			|  |
+			|               |
