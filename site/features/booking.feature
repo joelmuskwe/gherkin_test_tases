@@ -31,7 +31,7 @@ Feature: Site - Booking flow for logged-in users
 		And I logged in my account
 		When I click on "Schedule Appointment"
 
-		Scenario: I want to schedule an Appointment for delivery
+		Scenario: I want to schedule Delivery Appointment
 			And I select "Deliver My Stuff"
 			And I select the items I want to store
 			And i click on "Schedule Delivery"
@@ -52,7 +52,7 @@ Feature: Site - Booking flow for logged-in users
 			And I click on "confirm your appointment" button
 			Then I should land on confirmed appointment page and see my Appointment
 
-		Scenario: I want to schedule a pickup Appointment to store more Stuff
+		Scenario: I want to schedule Pickup Appointment 
 			And I select Store More Stuff
 			And I select my plan
 			And I provide how many bins I need
