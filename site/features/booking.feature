@@ -82,3 +82,7 @@ Feature: Site - Booking Flow for Existing Users
 			And I click skip
 			Then I should be on appointment confirmation page
 			And I should see my appointment details
+
+			| pickUp |
+			| yes		 |
+			| no		 |

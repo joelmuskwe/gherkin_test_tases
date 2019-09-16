@@ -6,7 +6,7 @@ Feature: Site - Homepage
 		And I am on "/"
 
 		@linksAndButtons
-		Scenario Outline: I want to use all button and link components in Site - Homepage
+		Scenario Outline: I want to use all button and link components
 			When I press <element> from <component>
 			Then I <expectedResult>
 
